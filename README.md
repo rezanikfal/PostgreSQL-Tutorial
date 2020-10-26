@@ -26,4 +26,4 @@
 ## Four types of Join  
 ![Jion1 Preview Shot](./Join1.JPG)
 
-![Jion2 Preview Shot](./Join1.JPG)
+![Jion2 Preview Shot](./Join2.JPG)
