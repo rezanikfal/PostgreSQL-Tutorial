@@ -27,3 +27,8 @@
 ![Jion1 Preview Shot](./Join1.JPG)
 
 ![Jion2 Preview Shot](./Join2.JPG)
+
+## Count aggregate function
+It does not count the NULL values. To fix this issue we can use "*":
+
+    SELECT user_id, COUNT(*) from COMMENTS GROUP BY user_id
