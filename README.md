@@ -42,3 +42,10 @@ It does not count the NULL values. To fix this issue we can use "*":
     WHERE photo_id<3
     GROUP BY photo_id
     HAVING COUNT(*) > 10
+    
+## Order By
+By default it is Ascending (ASC)
+
+    select *
+    FROM products
+    ORDER BY price, weight DESC;
