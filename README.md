@@ -32,3 +32,6 @@
 It does not count the NULL values. To fix this issue we can use "*":
 
     SELECT user_id, COUNT(*) from COMMENTS GROUP BY user_id
+
+## SQL commands order 
+![SQL Order Preview Shot](./SQLOrder.jpg)
