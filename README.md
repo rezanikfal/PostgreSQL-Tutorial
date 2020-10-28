@@ -35,3 +35,10 @@ It does not count the NULL values. To fix this issue we can use "*":
 
 ## SQL commands order 
 ![SQL Order Preview Shot](./SQLOrder.jpg)
+
+## Filtering by "Having" 
+    SELECT photo_id, COUNT(*)
+    FROM comments
+    WHERE photo_id<3
+    GROUP BY photo_id
+    HAVING COUNT(*) > 10
