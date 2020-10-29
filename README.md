@@ -49,3 +49,14 @@ By default it is Ascending (ASC)
     select *
     FROM products
     ORDER BY price, weight DESC;
+
+## LIMIT & OFFSET
+OFFSET skips the records and LIMIT generates the exact number of records  
+LIMIT does not exist in SQL-Server. There are FETCH & TOP instead  
+Second & third most expensive phones:
+
+    SELECT name 
+    FROM phones
+    ORDER BY price desc
+    LIMIT 2
+    OFFSET 1;
