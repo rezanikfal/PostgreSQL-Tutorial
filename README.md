@@ -60,3 +60,10 @@ Second & third most expensive phones:
     ORDER BY price desc
     LIMIT 2
     OFFSET 1;
+
+## UNION
+Manufacturer(s) that make phones with price less than 170. Also Manufacturer(s) that make more that 2 phones
+
+    SELECT manufacturer FROM phones WHERE price<170
+    UNION
+    SELECT manufacturer FROM phones GROUP BY manufacturer HAVING COUNT(*)>2
