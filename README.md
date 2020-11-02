@@ -75,3 +75,8 @@ When the Subqueries  returns a column, we use "IN" to get the data.
         WHERE product_id IN (
       SELECT id FROM products WHERE price/weight <10
     );
+    
+When the Subqueries  returns a single value
+    
+    SELECT name, price from phones 
+    where price > (select price from phones where name= "S5620 Monte" );
