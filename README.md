@@ -67,3 +67,11 @@ Manufacturer(s) that make phones with price less than 170. Also Manufacturer(s) 
     SELECT manufacturer FROM phones WHERE price<170
     UNION
     SELECT manufacturer FROM phones GROUP BY manufacturer HAVING COUNT(*)>2
+    
+ ## Subqueries  with Where
+When the Subqueries  returns a column, we use "IN" to get the data.
+
+    SELECT id FROM orders
+        WHERE product_id IN (
+      SELECT id FROM products WHERE price/weight <10
+    );
