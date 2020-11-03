@@ -80,3 +80,10 @@ When the Subqueries  returns a single value
     
     SELECT name, price from phones 
     where price > (select price from phones where name= "S5620 Monte" );
+    
+## All & SOME operators
+      
+Price is bigger than all subquery prices for "ALL" and bigger than at least one subquery prices for "SOME".
+
+    SELECT name from phones
+    WHERE price > ALL(SELECT price FROM phones WHERE manufacturer = 'Samsung');
