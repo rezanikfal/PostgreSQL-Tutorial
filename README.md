@@ -87,3 +87,12 @@ Price is bigger than all subquery prices for "ALL" and bigger than at least one 
 
     SELECT name from phones
     WHERE price > ALL(SELECT price FROM phones WHERE manufacturer = 'Samsung');
+    
+## SELECT without FROM
+      
+Select from subqueies only when they generate "ONE" value
+
+    SELECT 
+    (SELECT MAX(price) FROM phones) AS max_price,
+    (SELECT MIN(price) FROM phones) AS min_price,
+    (SELECT AVG(price) FROM phones) AS avg_price
