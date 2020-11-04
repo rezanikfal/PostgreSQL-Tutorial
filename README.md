@@ -96,3 +96,8 @@ Select from subqueies only when they generate "ONE" value
     (SELECT MAX(price) FROM phones) AS max_price,
     (SELECT MIN(price) FROM phones) AS min_price,
     (SELECT AVG(price) FROM phones) AS avg_price
+
+## DISTINCT
+
+    SELECT COUNT(DISTINCT manufacturer)
+    from phones;
