@@ -101,3 +101,10 @@ Select from subqueies only when they generate "ONE" value
 
     SELECT COUNT(DISTINCT manufacturer)
     from phones;
+    
+  ## GREATEST, LEAST (not in SQL-Server)
+  
+  If "2*weight" is less than 30, then return 30 for any product. If not return 2 * weight.
+        
+    SELECT name, GREATEST(30, 2 * weight)
+    FROM products
