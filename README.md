@@ -120,3 +120,28 @@ Creates a new column according to conditions
         ELSE 'The quantity is less than 2'
     END AS ID_Description
     FROM Features;
+
+## PostgreSQL - Add NOT NULL to an existing table
+      
+    CREATE TABLE products(
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(40),
+        department VARCHAR(40),
+        price INTEGER,
+        weight INTEGER
+    );
+
+    INSERT INTO products(name, department, price, weight)
+    VALUES ('Shirt', 'Clothes', 20,1)
+
+    INSERT INTO products(name, department, weight)
+    VALUES ('pants', 'Clothes', 3)
+
+    UPDATE products SET price = 9999
+    WHERE price IS NULL
+    
+    -----------------------
+    ALTER TABLE products
+    ALTER COLUMN price
+    SET NOT NULL
+    -----------------------
