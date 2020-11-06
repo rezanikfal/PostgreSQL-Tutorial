@@ -158,3 +158,27 @@ Creates a new column according to conditions
     ALTER COLUMN price
     SET DEFAULT 999;
 
+## PostgreSQL - SET Unique Value for a column 
+   
+       CREATE TABLE products(
+        name VARCHAR(50) NOT NULL UNIQUE 999,
+        weight INTEGER
+    );
+    
+    -----------------------
+    ALTER TABLE products
+    ADD UNIQUE (name)
+    
+## PostgreSQL - Multi-column Unique Constraint
+  
+When you add a records with the same existing data (both name and department) it gives us error
+   
+    ALTER TABLE products
+    ADD UNIQUE (name, department)  
+
+## PostgreSQL - Remove a Constraint like Unique Value
+
+The Constraint name could be found under Tables -> products -> Constraints
+
+    ALTER TABLE products
+    DROP CONSTRAINT products_name_key
