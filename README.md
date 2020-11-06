@@ -145,3 +145,16 @@ Creates a new column according to conditions
     ALTER COLUMN price
     SET NOT NULL
     -----------------------
+
+## PostgreSQL - SET Default Value 
+   
+       CREATE TABLE products(
+        price INTEGER DEFAULT 999,
+        weight INTEGER
+    );
+    
+    -----------------------
+    ALTER TABLE products
+    ALTER COLUMN price
+    SET DEFAULT 999;
+
